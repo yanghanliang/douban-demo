@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import store from './store'
+import store from './store' // 导入vuex创建的仓库
 
 // 加载 bootstrap 的样式
 import 'bootstrap/dist/css/bootstrap'

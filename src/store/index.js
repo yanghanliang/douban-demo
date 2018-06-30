@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import movieList from './modules/movie-list'
+import movieList from './modules/movie-list' // 导入vuex模块化,便于管理
 
 Vue.use('Vuex')
 
