@@ -4,6 +4,12 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+// 加载 bootstrap 的样式
+import 'bootstrap/dist/css/bootstrap'
+
+// 加载自定义样式
+import '@/assets/css/index'
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
