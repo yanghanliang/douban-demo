@@ -7,9 +7,10 @@
           :key="item.id"
           class="media">
           <div class="media-left">
-            <a href="#">
+            <!-- path: '/movie/:id/:name' 设置:id的值, 使用params: { id: 1 } -->
+            <router-link :to="{ name: 'movie', params: { id: item.id } }">
               <img class="media-object" :src="'https://images.weserv.nl?url=' + item.images.small.substr(7)" alt="">
-            </a>
+            </router-link>
           </div>
           <div class="media-body">
             <h4 class="media-heading">{{ item.title }}</h4>

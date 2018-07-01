@@ -20,9 +20,10 @@ const movieList = {
       // 获取变化路由的参数
       const rootState = context.rootState
       const path = rootState.route.path
-      // console.log(path)
+      // 获取搜索框中的内容
+      const q = rootState.route.query.q
       // 发送jsonp的请求, 获取数据
-      jsonp(`https://api.douban.com/v2/movie${path}`, null, (err, data) => {
+      jsonp(`https://api.douban.com/v2/movie${path}?q=${q}`, null, (err, data) => {
         if (err) {
           console.error(err.message)
         } else {
