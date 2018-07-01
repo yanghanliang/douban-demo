@@ -16,16 +16,24 @@ const movieList = {
   },
   actions: {
     // 发送异步请求
-    setData(context) {
-      jsonp('https://api.douban.com/v2/movie/in_theaters', null, (err, data) => {
-        console.log(data)
-        context.commit({
-          // type: 'setData',
-          // title: data.title,
-          // subjects: data.subjects
-          type: 'setData',
-          ...data
-        })
+    setData(context, payload) {
+      // 获取变化路由的参数
+      const rootState = context.rootState
+      const path = rootState.route.path
+      // console.log(path)
+      // 发送jsonp的请求, 获取数据
+      jsonp(`https://api.douban.com/v2/movie${path}`, null, (err, data) => {
+        if (err) {
+          console.error(err.message)
+        } else {
+          context.commit({
+            // type: 'setData',
+            // title: data.title,
+            // subjects: data.subjects
+            type: 'setData',
+            ...data
+          })
+        }
       })
     }
   }

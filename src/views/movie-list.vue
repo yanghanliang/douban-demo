@@ -24,6 +24,8 @@ import { mapState, mapActions } from 'vuex'
 
 export default {
   created() {
+    // 获取当前的路由规则 path: "/coming_soon"
+    // console.log(this.$route)
     // 执行actions
     this.setData()
   },
@@ -36,6 +38,14 @@ export default {
     ...mapState('movieList', [
       'title', 'subjects'
     ])
+  },
+  // 侦听器, 监听路由规则的变化, 如果路由规则发生变化就会执行
+  watch: {
+    '$route' (to, from) {
+      // 对路由变化作出响应...
+      // 执行actions
+      this.setData()
+    }
   }
 }
 </script>
