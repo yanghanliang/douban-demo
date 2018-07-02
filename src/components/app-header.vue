@@ -40,7 +40,7 @@ export default {
       this.$router.push({
         name: 'search',
         query: {
-            q: this.searchValue
+          q: this.searchValue
         }
       })
     }
