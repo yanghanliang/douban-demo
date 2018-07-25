@@ -7,7 +7,7 @@
         <!-- 放侧边栏 -->
           <app-sidebar></app-sidebar>
           <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <router-view>123的救死扶伤的看法就开始大幅亏损的那就看    士大夫45ud'j's'f's'd'k'f'j'k's'd'f'k's'd'n'j'k</router-view>
+            <router-view></router-view>
           </div>
       </div>
     </div>
